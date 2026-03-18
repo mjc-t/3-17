@@ -1,0 +1,22 @@
+[OSPFv3]
+ipv6 router ospf 1
+router-id IPv4주소형식
+
+int ...
+ipv6 ospf 1 area X
+
+NBMA 구간
+int ...
+ipv6 ospf neighbor 상대방링크로컬주소
+
+네트워크 타입 변경
+int ..
+ipv6 ospf network {point-to-point | broadcast}
+
+Default 설정
+ipv6 router ospf 1
+default-information originate (always)
+
+Virtual-Link 설정
+ipv6 router ospf 1
+area X virtual-link 상대방라우터ID
